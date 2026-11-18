@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Connecting · Agg Clips Studio</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap doc">
+    <h1>Connecting to Agg Clips Studio…</h1>
+    <p id="msg">Handing the TikTok sign-in back to the desktop app on this computer.</p>
+  </main>
+  <script>
+    // TikTok redirects here after sign-in (?code=…&state=…). The desktop app listens on this computer at
+    // 127.0.0.1:3455/callback/ and finishes the sign-in there. Nothing is stored or sent anywhere else.
+    (function () {
+      var target = "http://127.0.0.1:3455/callback/" + window.location.search;
+      setTimeout(function () {
+        document.getElementById("msg").textContent =
+          "If nothing happens, the desktop app is not waiting for a sign-in. Start the TikTok login from the app and try again.";
+      }, 4000);
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
