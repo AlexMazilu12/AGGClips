@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Agg Clips Studio</title>
+  <meta name="description" content="How Agg Clips Studio handles data from TikTok, YouTube, Instagram, Twitch and Kick.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e88"/><stop offset=".55" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ffd23f"/></linearGradient></defs><rect x="2" y="2" width="96" height="96" rx="22" fill="url(#g)"/><path fill="#fff" d="M20 20h17v5.5H25.5V37H20zM80 20H63v5.5h11.5V37H80zM20 80h17v-5.5H25.5V63H20zM80 80H63v-5.5h11.5V63H80z"/><path fill="#fff" d="M40 31v38l31-19z"/></svg>
+        Agg Clips Studio
+      </a>
+      <nav class="links"><a href="./">Home</a><a href="terms.html">Terms</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap doc">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective November 18, 2026</p>
+
+    <p>Agg Clips Studio (“the tool”) is a personal desktop application operated by Agg Clips (“we”). It runs on the
+      operator's own computer and is used only to manage and publish the operator's own clips to the operator's own
+      accounts. It is not a public service: no other people sign up for it or connect their accounts to it.</p>
+
+    <h2>1. Data we access</h2>
+    <table>
+      <thead><tr><th>Source</th><th>What</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>TikTok (Login Kit, Content Posting API)</td>
+          <td>With the operator's permission: the connected account's open ID, display name and avatar
+            (<code>user.info.basic</code>), and the ability to send a video to that account's drafts (<code>video.upload</code>).
+            OAuth access and refresh tokens.</td>
+          <td>To show which account is connected and to upload approved clips as drafts, which the operator then
+            finishes and posts inside the TikTok app.</td></tr>
+        <tr><td>YouTube (YouTube Data API)</td>
+          <td>With the operator's permission: the ability to upload videos to the operator's channel (<code>youtube.upload</code>).
+            Public data with an API key: live-stream titles, viewer counts and public live-chat messages of tracked channels.</td>
+          <td>To publish approved clips as Shorts and to detect highlights in public live streams.</td></tr>
+        <tr><td>Instagram (Instagram Graph API)</td>
+          <td>With the operator's permission: the operator's Facebook Page and linked professional Instagram account,
+            and the ability to publish Reels to it.</td>
+          <td>To publish approved clips as Reels.</td></tr>
+        <tr><td>Twitch, Kick</td>
+          <td>Public stream information (who is live, titles, categories, viewer counts) and, on Twitch, public chat
+            messages read anonymously.</td>
+          <td>To know which streams to record and to detect highlights.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>2. How the data is used and stored</h2>
+    <ul class="plain">
+      <li>Everything is processed and stored <b>locally on the operator's computer</b>. There is no server, database or
+        cloud account operated by us that receives this data.</li>
+      <li>OAuth tokens are kept in local files on that computer and are only sent to the platform that issued them, over HTTPS.</li>
+      <li>Public chat messages are analysed in memory to score moments (message rate, laughter, hype). A few short message
+        samples may be saved next to a detected moment so the operator can review it. Usernames are not used for anything else.</li>
+      <li>Stream recordings are kept in a rolling buffer (6 hours by default) and deleted automatically; only the clips the
+        operator chooses to keep remain.</li>
+      <li>Videos are sent only to the platform the operator approved them for.</li>
+    </ul>
+
+    <h2>3. What we do not do</h2>
+    <ul class="plain">
+      <li>We do not sell, rent or share data with third parties, and we do not use it for advertising or profiling.</li>
+      <li>We do not access other people's TikTok, YouTube or Instagram accounts.</li>
+      <li>This website does not use cookies, analytics or trackers.</li>
+    </ul>
+
+    <h2>4. Retention and deletion</h2>
+    <p>Tokens and clips stay on the operator's computer until the operator deletes them. Access can be revoked at any time:</p>
+    <ul class="plain">
+      <li><b>TikTok</b>: in the TikTok app, Settings and privacy → Security → Manage app permissions (or Apps and websites) → remove the app.</li>
+      <li><b>Google / YouTube</b>: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+      <li><b>Meta / Instagram</b>: Facebook Settings → Business integrations (or Apps and websites) → remove the app.</li>
+    </ul>
+    <p>Revoking access makes the stored tokens useless; deleting the tool's data folder removes them completely.</p>
+
+    <h2>5. YouTube API Services</h2>
+    <p>This tool uses YouTube API Services. By using its YouTube features you agree to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of data is described in the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h2>6. Children</h2>
+    <p>The tool is not directed to children under 13 and does not knowingly process their personal data.</p>
+
+    <h2>7. Changes</h2>
+    <p>If this policy changes, the new version will be published on this page with a new effective date.</p>
+
+    <h2>8. Contact</h2>
+    <p>For privacy questions, data deletion or takedown requests, send a direct message to <b>@aggclips</b> on Instagram.</p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Agg Clips</span>
+      <span><a href="./">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>

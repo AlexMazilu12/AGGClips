@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agg Clips Studio</title>
+  <meta name="description" content="Agg Clips Studio is the personal tool behind @aggclips: it finds highlights in live streams, turns them into captioned vertical clips, and publishes them to the owner's own accounts after manual review.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e88"/><stop offset=".55" stop-color="#ff7a3d"/><stop offset="1" stop-color="#ffd23f"/></linearGradient></defs><rect x="2" y="2" width="96" height="96" rx="22" fill="url(#g)"/><path fill="#fff" d="M20 20h17v5.5H25.5V37H20zM80 20H63v5.5h11.5V37H80zM20 80h17v-5.5H25.5V63H20zM80 80H63v-5.5h11.5V63H80z"/><path fill="#fff" d="M40 31v38l31-19z"/></svg>
+        Agg Clips Studio
+      </a>
+      <nav class="links"><a href="./" aria-current="page">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Personal creator tool</span>
+      <h1>Live-stream highlights, turned into <span class="g">vertical clips</span>.</h1>
+      <p class="lead">Agg Clips Studio is the desktop tool behind the <b>@aggclips</b> accounts. It watches public live
+        streams, spots the moments where chat and audio explode, cuts them into captioned 9:16 clips, and, only after
+        the owner reviews and approves each one, publishes them to the owner's own YouTube, Instagram and TikTok accounts.</p>
+      <ol class="steps">
+        <li><b>Detect</b><span>Public stream data (chat activity, laughter, audio peaks) marks the best moments.</span></li>
+        <li><b>Clip</b><span>Each moment becomes a vertical clip with burned-in captions and a title.</span></li>
+        <li><b>Review</b><span>The owner watches every clip and approves or rejects it by hand.</span></li>
+        <li><b>Publish</b><span>Approved clips go to the owner's own channels through official APIs.</span></li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2>How the TikTok integration works</h2>
+      <div class="card">
+        <ul class="plain">
+          <li>The owner signs in once with <b>Login Kit</b> and grants two permissions: <code>user.info.basic</code>
+            (to show which account is connected) and <code>video.upload</code> (to send a clip to the account's drafts).</li>
+          <li>When the owner approves a clip, the tool uploads it with the <b>Content Posting API (Upload)</b>. The video
+            lands in the TikTok inbox as a draft; the owner opens TikTok, edits the post and publishes it from the app.</li>
+          <li>Nothing is posted publicly by the tool, nothing is posted without a manual review, and only the owner's own
+            account is connected. There are no other users.</li>
+        </ul>
+      </div>
+      <h2>Other platforms</h2>
+      <div class="card">
+        <ul class="plain">
+          <li><b>YouTube</b>: uploads approved clips as Shorts to the owner's channel with the YouTube Data API
+            (<code>youtube.upload</code>). This tool uses YouTube API Services.</li>
+          <li><b>Instagram</b>: publishes approved clips as Reels to the owner's professional account with the Instagram Graph API.</li>
+          <li><b>Twitch, Kick, YouTube</b>: reads public live-stream information (who is live, titles, viewer counts, public chat)
+            to find highlights.</li>
+        </ul>
+      </div>
+      <p class="note">Data handling is described in the <a href="privacy.html">Privacy Policy</a>; usage rules are in the
+        <a href="terms.html">Terms of Service</a>.</p>
+    </section>
+
+    <section class="block">
+      <h2>Contact</h2>
+      <p>Questions, takedown requests or data requests: send a direct message to <b>@aggclips</b> on Instagram.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Agg Clips. Not affiliated with TikTok, Google, YouTube, Meta, Instagram, Twitch, Kick, Rockstar Games or Take-Two.</span>
+      <span><a href="./">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
